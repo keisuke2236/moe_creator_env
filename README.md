@@ -1,19 +1,19 @@
-# itamae-rails
+# MoeCreator開発環境構築
 
 Use the itamae is a recipe to make a rails environment.
 
 ## Usage
 
 ```
-cd ~/work/itamae/
-git clone git@github.com:zaru/itamae-rails.git
-cd itamae-rails
-cp Vagrantfile.sample ~/work/project_name/Vagrantfile
+cd ~/work/moe_creator_env/
+git clone git@github.com:keisuke2236/moe_creator_env.git
+cd moe_creator_env
+cp Vagrantfile.sample ~/work/Vagrantfile
 
-cd ~/work/project_name/Vagrantfile
+cd ~/work/
 vagrant up
 
-cd ~/work/itamae/itamae-rails
+cd ~/work/moe_creator_env
 bundle install --path vendor/bundler
-bundle exec itamae ssh --user vagrant --host 192.168.33.250 -y node/rails/development.yaml rails.rb
+bundle exec itamae ssh --user vagrant --host 192.168.33.250 -y node/rails/development.yml rails.rb
 ```
