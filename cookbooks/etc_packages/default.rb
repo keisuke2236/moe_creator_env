@@ -18,6 +18,8 @@ autoconf
 automake
 libtool
 bison
+postgresql-devel
+postgresql
 curl-devel ).each do |pkg|
   package pkg
 end
