@@ -15,9 +15,9 @@ server {
 server {
     # Use SSL
     listen 443 default ssl;
-    ssl on;
-    ssl_certificate      <%= node[:nginx][:ssl_key_dir] %>/pushnate_2015.pem;
-    ssl_certificate_key  <%= node[:nginx][:ssl_key_dir] %>/pushnate_2015.key;
+    ssl off;
+    <!-- ssl_certificate      <%= node[:nginx][:ssl_key_dir] %>/pushnate_2015.pem;
+    ssl_certificate_key  <%= node[:nginx][:ssl_key_dir] %>/pushnate_2015.key; -->
 
     client_max_body_size 4G;
     server_name <%= node[:nginx][:hostname] %> www.<%= node[:nginx][:hostname] %>;
