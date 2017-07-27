@@ -1,11 +1,11 @@
-env: staging
+env: production
 server:
   user: ec2-user
 nginx:
-  hostname: stg.example.com
-  document_root: /var/www/stg.example.com
+  hostname: 35.164.75.182
+  document_root: /var/www/vhosts/current/moe_creator.com
   worker_num: 1
-  useBasicAuth: true
+  useBasicAuth: false
 
 rtn_rbenv:
   user: ec2-user
@@ -19,10 +19,10 @@ unicorn:
   path: /usr/local/rbenv/shims:/usr/local/rbenv/bin:$PATH
   rbenv_root: /home/ec2-user/.rbenv
   ruby_ver: 2.3.0
-  env: staging
+  env: production
   app_root: /var/www/stg.example.com
   app_dir: /current
-  conf_dir: /current/config/unicorn/staging.rb
+  conf_dir: /current/config/unicorn/production.rb
   pid_dir: /shared/tmp/pids/unicorn.pid
   user: ec2-user
   log_rotate_interval: 12
